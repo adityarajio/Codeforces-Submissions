@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class HalloumiBoxes {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        if(!sc.hasNextInt()) return;
         int t = sc.nextInt();
         while(t-- > 0){
             int n = sc.nextInt();
