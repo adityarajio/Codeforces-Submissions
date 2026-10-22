@@ -10,17 +10,16 @@ public class DontTryToCount {
             StringBuilder x = new StringBuilder(sc.next());
             StringBuilder s = new StringBuilder(sc.next());
             int operations = 0;
-            for(int i = 0; i < n; i++){
-                for(int j = i+1; j < n; j++){
-                    String ss = x.substring(i, j);
-                    if(s.toString().contains(ss)){
-                        break;
-                    }
-                    else{
-                        operations++;
-                    }
+            while(x.indexOf(s.toString())==-1){
+                x.append(x);
+                n*=2;
+                operations++;
+                if(n>25 && x.indexOf(s.toString())==-1) {
+                    operations = -1;
+                    break;
                 }
             }
+
             System.out.println(operations);
         }
         sc.close();
