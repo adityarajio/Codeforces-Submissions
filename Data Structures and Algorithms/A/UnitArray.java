@@ -21,6 +21,11 @@ public class UnitArray {
 
             int sum = 0;
             int product = 1;
+            for(int i = 0; i < n; i++){
+                sum += arr[i];
+                product *= arr[i];
+            }
+
             if(sum >= 0 && product == 1) sb.append(0);
             else {
                 int c1 = Integer.MAX_VALUE;
